@@ -78,7 +78,7 @@ export function JokenpoContextProvider({ children }: JokenpoContextProviderProps
 
   useEffect(() => {
     const cookie = document.cookie.split('=');
-    if (cookie) {
+    if (cookie[1]) {
       setScore(parseInt(cookie[1]));
     }
   }, []);
