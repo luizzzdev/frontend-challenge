@@ -40,7 +40,7 @@ export default function Status({
             <VStack>
               {result === "DRAW" ? (
                 <Text color={"#fff"} fontSize={36} fontWeight={700}>
-                  IT'S A {result}!
+                  ITS A {result}!
                 </Text>
               ) : (
                 <Text color={"#fff"} fontSize={36} fontWeight={700}>
