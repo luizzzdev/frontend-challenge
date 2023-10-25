@@ -8,9 +8,9 @@ interface Props {
   playerChoice: ChoiceType
 }
 
-function Jokenpo({handleButton, isLoading, playerChoice}: Props) {
+function Jokenpo({ handleButton, isLoading, playerChoice }: Props) {
   return (
-<>
+    <>
       {!isLoading ? (
         <Flex
           align={"center"}
@@ -47,7 +47,16 @@ function Jokenpo({handleButton, isLoading, playerChoice}: Props) {
             <ButtonChoiceIcon typeChoice='' />
           </Center>
           <Center mt={8} w="100%">
-            <Text fontSize={'md'}>MACHINE IS CHOOSING...</Text>
+            <Text
+              color="brand.gray"
+              textTransform="uppercase"
+              textAlign="center"
+              fontSize={["md", "md", "xl"]}
+              mt="9"
+              w="full"
+            >
+              MACHINE IS CHOOSING...
+            </Text>
           </Center>
 
         </Flex>
