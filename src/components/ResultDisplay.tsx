@@ -1,6 +1,7 @@
 import { Center, Flex, Text } from "@chakra-ui/react"
 import ButtonChoiceIcon from "./ButtonChoiceIcon"
 import { ChoiceType } from "../contexts/JokenpoContext"
+import { isMobile } from "../utils/isMobile"
 
 interface Props {
   result: "win" | "lose" | "tied"
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export function ResultDisplay({ player1Choice, player2Choice, result }: Props) {
+
   return (
     <Flex
       align={"center"}
@@ -23,6 +25,18 @@ export function ResultDisplay({ player1Choice, player2Choice, result }: Props) {
       <Center w="50%">
         <ButtonChoiceIcon typeChoice={player2Choice} />
       </Center>
+
+      {isMobile() &&
+        <Text
+          color="brand.gray"
+          textTransform="uppercase"
+          textAlign="center"
+          fontSize="md"
+          mt="9"
+          w="full"
+        >
+          {`MACHINE SELECTED ${player2Choice}`}
+        </Text>}
 
       <Text
         color="brand.gray"
