@@ -24,8 +24,8 @@ function ButtonChoiceIcon({
   return (
     <Button
       bg="brand.gray"
-      w={["32", "32", "40"]}
-      h={["32", "32", "40"]}
+      w={["130px", "130px", "200px"]}
+      h={["130px", "130px", "200px"]}
       borderRadius={9999}
       border="16px"
       borderColor={typeChoice}
@@ -33,7 +33,13 @@ function ButtonChoiceIcon({
       onClick={onClick}
       {...props}
     >
-      {typeChoice !== "" && <Image src={icon[typeChoice]} alt="" />}
+      {typeChoice !== "" &&
+        <Image
+          w="70%"
+          h="60%" 
+          src={icon[typeChoice]}
+          alt=""
+        />}
     </Button>
   )
 }
