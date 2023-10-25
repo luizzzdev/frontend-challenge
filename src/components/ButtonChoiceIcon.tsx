@@ -5,12 +5,12 @@ import paperIcon from "../../assets/icon-paper.svg";
 
 
 interface Props extends ButtonProps {
-  typeChoice: 'rock' | 'scissor' | 'paper' | ''
+  typeChoice?: 'rock' | 'scissor' | 'paper' 
   onClick?: () => void
 }
 
 function ButtonChoiceIcon({
-  typeChoice = "",
+  typeChoice,
   onClick,
   ...props
 }: Props) {
@@ -28,12 +28,12 @@ function ButtonChoiceIcon({
       h={["130px", "130px", "200px"]}
       borderRadius={9999}
       border="16px"
-      borderColor={typeChoice}
+      borderColor={typeChoice || "brand.red"}
       borderStyle="solid"
       onClick={onClick}
       {...props}
     >
-      {typeChoice !== "" &&
+      {typeChoice &&
         <Image
           w="70%"
           h="60%" 

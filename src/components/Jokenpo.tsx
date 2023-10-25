@@ -44,7 +44,7 @@ function Jokenpo({ handleButton, isLoading, playerChoice }: Props) {
             <ButtonChoiceIcon typeChoice={playerChoice} />
           </Center>
           <Center w="50%">
-            <ButtonChoiceIcon typeChoice='' />
+            <ButtonChoiceIcon />
           </Center>
           <Center mt={8} w="100%">
             <Text

@@ -6,7 +6,8 @@ export const theme = extendTheme({
       primary: "#2C3E50",
       title: "#34495E",
       gray: "#BDC3C7",
-      button: "#2980B9"
+      button: "#2980B9",
+      red: "#E74C3C"
     },
     rock: "#27AE60",
     scissor: "#2980B9",

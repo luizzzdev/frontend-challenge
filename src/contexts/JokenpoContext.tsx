@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
 
-export type ChoiceType = "rock" | "paper" | "scissor" | "";
+export type ChoiceType = "rock" | "paper" | "scissor" | undefined;
 type ResultType = "win" | "lose" | "tied";
 
 interface JokenpoContextType {
@@ -20,8 +20,8 @@ interface JokenpoContextProviderProps {
 export const JokenpoContext = createContext({} as JokenpoContextType);
 
 export function JokenpoContextProvider({ children }: JokenpoContextProviderProps) {
-  const [player1Choice, setPlayer1Choice] = useState<ChoiceType>("");
-  const [player2Choice, setPlayer2Choice] = useState<ChoiceType>("");
+  const [player1Choice, setPlayer1Choice] = useState<ChoiceType>(undefined);
+  const [player2Choice, setPlayer2Choice] = useState<ChoiceType>(undefined);
   const [resultJokenpo, setResultJokenpo] = useState<ResultType>("lose");
   const [score, setScore] = useState(0);
 
@@ -73,7 +73,7 @@ export function JokenpoContextProvider({ children }: JokenpoContextProviderProps
   }
 
   function resetJokenpo() {
-    setPlayer2Choice("");
+    setPlayer2Choice(undefined);
   }
 
   useEffect(() => {
